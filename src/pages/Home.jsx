@@ -39,7 +39,7 @@ export default function Home() {
               report, search, and reclaim lost possessions.
             </p>
             <div className={styles.heroButtons}>
-              <Link to="/sign-up">
+              <Link to="/register">
                 <button className={styles.getStartedBtn}>
                   Get Started <ArrowRight className={styles.arrowIcon} />
                 </button>
