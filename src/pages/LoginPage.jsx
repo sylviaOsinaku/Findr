@@ -31,14 +31,17 @@ const LoginPage = () => {
     setError(null)
 
     try {
-      const data =  await loginUser(formData.email, formData.password)
-      const { token} = await loginUser(formData.email, formData.password)
-      console.log("Login data:", data)
-      console.log("Login response:", token)
-      login(token)
-      console.log("user successfully logged in")
-      navigate("/dashboard")
-    } catch (err) {
+  const data = await loginUser(formData.email, formData.password);
+  const { token } = data;
+
+  console.log("Login data:", data);
+  console.log("Login response token:", token);
+
+  login(token); // This stores the token in localStorage and fetches the user
+  console.log("User successfully logged in");
+
+  navigate("/dashboard");
+} catch (err) {
       console.error("Login error:", err)
       setError("Invalid email or password. Please try again.")
     } finally {

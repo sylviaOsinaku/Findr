@@ -6,7 +6,7 @@ import { getMyReports } from "../services/reportService"
 import styles from "./MyReports.module.css"
 
 export default function  MyReports() {
-  const { user, loading: authLoading ,token} = useContext(AuthContext);
+  const { user, loading: authLoading } = useContext(AuthContext);
   const [reports, setReports] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);

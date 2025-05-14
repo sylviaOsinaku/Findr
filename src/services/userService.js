@@ -38,6 +38,11 @@ export const loginUser = async (email, password) => {
 
 // Get user info with token
 export const getUserInfo = async (token) => {
+  if (!token) {
+    throw new Error("No token provided");
+  }
+  // Fetch user info using the token
+  // console.log(token)
   const res = await fetch(`${BASE_URL}/me`, {
     headers: {
       Authorization: `Bearer ${token}`,
