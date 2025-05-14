@@ -11,6 +11,12 @@ import { AuthProvider } from "./context/AuthContext"
 import LoginPage from "./pages/LoginPage"
 import RegisterPage from "./pages/RegisterPage"
 import Home from "./pages/Home"
+import AboutPage from "./pages/AboutPage"
+import CampusListPage from "./pages/CampusListPage"
+import ContactPage from "./pages/ContactPage"
+import TermsPage from "./pages/TermsPage"
+import PrivacyPage from "./pages/PrivacyPage"
+import HomePage from "./pages/HomePage"
 import ProtectedRoute from "./components/common/ProtectedRoute"
 
 function App() {
@@ -20,10 +26,16 @@ function App() {
         <Routes>
 
           {/* Public Routes */}
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<HomePage />} />
+          {/* <Route path="/how-it-works" element={<Abou} */}
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
-
+<Route path="/how-it-works" element={<AboutPage/>} />
+          <Route path="/campus-list" element={<CampusListPage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/privacy" element={<PrivacyPage />} />
+          <Route path="/terms" element={<TermsPage />} />
           {/* Protected Routes */}
           <Route 
             element={

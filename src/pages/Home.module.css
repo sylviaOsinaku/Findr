@@ -38,9 +38,7 @@
   /* backdrop-filter: blur(8px); */
   box-shadow: var(--shadow-sm);
 }
-a{
-  text-decoration: none;
-}
+
 .headerContainer {
   display: flex;
   justify-content: space-between;
